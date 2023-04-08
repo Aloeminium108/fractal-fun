@@ -72,6 +72,12 @@ class FractalRenderer {
 
   }
 
+  reinitialize = () => {
+    const pass = this.initialize()
+    this.texture.delete()
+    this.texture = pass
+  }
+
   setPoint = (real, imag) => {
     this.real = real
     this.imag = imag

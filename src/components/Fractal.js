@@ -12,12 +12,17 @@ function Fractal() {
 
   const {real, imag} = useContext(juliaContext)
 
-  useEffect(() =>{
-    const fractalRenderer = new FractalRenderer(canvas.current, canvas.current.offsetWidth, canvas.current.offsetHeight)
-    fractalRenderer.setPoint(real, imag)
+  const fractalRenderer = useRef(null)
 
-    if (!warningFlag)
-      fractalRenderer.animate()
+  useEffect(() => {
+    fractalRenderer.current = new FractalRenderer(canvas.current, canvas.current.offsetWidth, canvas.current.offsetHeight)
+    fractalRenderer.current.setPoint(real, imag)
+    fractalRenderer.current.animate()
+  }, [])
+
+  useEffect(() => {
+    fractalRenderer.current.setPoint(real, imag)
+    fractalRenderer.current.reinitialize()
   })
 
   return (
