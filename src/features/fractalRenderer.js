@@ -58,7 +58,7 @@ class FractalRenderer {
       if (point[2] >= 0) {
         this.color(0, 0, 0, 255)
       } else {
-        const value = -point[2] % 256
+        const value = (-point[2] * 3) % 256
         this.color(value/255, value/255, value/255, 255)
       }
 

@@ -5,3 +5,9 @@ canvas {
 
   background-color: antiquewhite;
 }
+
+#fractal-container {
+  position: relative;
+  width: 80vw;
+  height: 80vh;
+}

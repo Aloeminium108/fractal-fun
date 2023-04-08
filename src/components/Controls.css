@@ -6,4 +6,9 @@ div {
 
 label {
   color: aliceblue;
+  font-size: xx-large;
+}
+
+input {
+  font-size: large;
 }
