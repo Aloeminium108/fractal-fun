@@ -1,0 +1,17 @@
+#navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  background-color: black;
+}
+
+#navbar * {
+  color: aliceblue;
+}
+
+.links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
